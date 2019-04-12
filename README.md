@@ -74,11 +74,11 @@
       - 目录结构：
       
       ```javascript
-         ---- store 文件夹  // 与main.js 文件同级
-               ---- module 文件夹
-                     ---- module1.js 文件
-                     ---- module2.js 文件
-               ---- index.js 文件    
+         |-- store 文件夹  // 与main.js 文件同级
+               |-- module 文件夹
+                     |-- module1.js 文件
+                     |-- module2.js 文件
+               |-- index.js 文件    
       ```
    
 ### 3.axios
