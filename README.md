@@ -103,15 +103,15 @@
          
         // module1.js || module2.js 写法：
         export default {
-        state:{
-           loading: false
-        },
-        mutations:{
-           setAppLoading(state, value) {
-             state.loading = value
-           },
+             state:{
+                 loading: false
+             },
+             mutations:{
+                setAppLoading(state, value) {
+                   state.loading = value
+                },
+            }
         }
-      }
       ```
       
    
@@ -146,7 +146,7 @@
          let comValue = QS.parse(comments)
 
       ```
-     + **What？看不懂！** 转外链看吧 [fllow me！](https://blog.csdn.net/suwu150/article/details/78333452)
+     + **What?看不懂!** 转外链看吧  [fllow Me！](https://blog.csdn.net/suwu150/article/details/78333452)
      
 ### 5. [lodash](https://vuex.vuejs.org/zh/installation.html)
 
