@@ -201,7 +201,10 @@
 		  });
 		}
 
-		```	
+		```
+   + **What ? 不明白 !
+   	- 移步外网 [中文](https://www.kancloud.cn/yunye/axios/234845)  [English](https://www.npmjs.com/package/axios)
+	
 ### 4. qs (配合 axios 使用)
 
    + **Vue中，序列化字符串，处理发送请求的参数使用工具 qs 来处理参数**
