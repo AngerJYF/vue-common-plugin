@@ -146,6 +146,8 @@
          let comValue = QS.parse(comments)
 
       ```
+     + **What？看不懂！** 转外链看吧 [fllow me！](https://blog.csdn.net/suwu150/article/details/78333452)
+     
 ### 5. [lodash](https://vuex.vuejs.org/zh/installation.html)
 
    + **Lodash** 就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。
