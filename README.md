@@ -351,4 +351,26 @@
 	new Date("getTime");
 ```
 
-### 8. vue-echarts
+### 8. [vue-echarts](https://github.com/ElemeFE/v-charts)
++ 通过 npm 安装
+```js
+	npm i v-charts echarts -S
+```
++ 在 main.js 中注册
+```js
+	// Echarts 使用 
+	import ECharts from 'vue-echarts/components/ECharts.vue';
+	Vue.component('v-chart', ECharts);
+	
+	// 手动引入 ECharts 各模块来减小打包体积
+	import 'echarts/lib/chart/line';
+	import 'echarts/lib/chart/bar';
+	import 'echarts/lib/chart/pie';
+	import 'echarts/lib/chart/map';
+	import 'echarts/map/js/china.js';
+	import 'echarts/lib/component/tooltip';
+	import 'echarts/lib/component/polar';
+	import 'echarts/lib/component/legend';
+	import 'echarts/lib/component/title.js';
+```
++ 外链查看 [Fllow Me!](https://blog.csdn.net/weixin_42288815/article/details/80856999)
