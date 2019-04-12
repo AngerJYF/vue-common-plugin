@@ -338,6 +338,7 @@
 		npm install moment --save
     	```
    + 在 main.js 中注册;
+   
 	```js
 		import moment from 'moment';
 		Vue.prototype.$moment = moment;
