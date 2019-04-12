@@ -4,9 +4,8 @@
 #### 3.axios
 #### 4.element-ui
 #### 5.[lodash](https://www.lodashjs.com/)
-
-    * 通过 npm
-     ```js
+   + 通过 npm
+     ```javascript
       $ npm i -g npm
       $ npm i --save lodash
      ```
