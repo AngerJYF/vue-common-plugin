@@ -10,15 +10,16 @@
    
       + 写法一：
       ```javascript 
-         import Vue from 'vue'
-         import VueRouter from 'vue-router'
+         import Vue from 'vue';
+         import VueRouter from 'vue-router';
+         
          Vue.use(VueRouter)
      ```
      + 写法二：
      ```javascript
          import Vue from "vue";
          import App from "./App";
-         import router from "./router.js" 
+         import router from "./router.js"; 
          
          new Vue({
            el: "#app",
