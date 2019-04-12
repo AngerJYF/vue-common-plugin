@@ -374,3 +374,153 @@
 	import 'echarts/lib/component/title.js';
 ```
 + 外链查看 [Fllow Me!](https://blog.csdn.net/weixin_42288815/article/details/80856999)
++ 作者本人项目(不要抄写!!!!!!)
+```js
+	 <template>
+	  <!-- 地图 -->
+	  <div class="china">
+	    <v-chart :options="map" auto-resize></v-chart>
+	  </div>
+	</template>
+	
+	<script>
+	import { maxBy, minBy, cloneDeep } from "lodash";
+	export default {
+	  props: ["newMapData"],
+	  methods: {
+	    getOptions(dataList, max, min) {
+	      return {
+		tooltip: {
+		  formatter: function(params) {
+		    if (!params.name) return "暂无数据";
+		    return (
+		      params.data["full_name"] +
+		      "<br>" +
+		      "信息数量: " +
+		      params.data["value"]
+		    );
+		  }
+		}, // 鼠标移到图里面的浮动提示框
+		visualMap: {
+		  type: "continuous",
+		  min: min,
+		  max: max,
+		  left: "left",
+		  top: "bottom",
+		  //text: ["高", "低"], // 文本，默认为数值文本
+		  calculable: true,
+		  itemHeight: 130, //图形的高度，即长条的高度。
+		  inRange: {
+		    symbolSize: [10, 90],
+		    color: ["#b4d1ec", "#5b99d7", "#0456b0", "#114499"]
+		  }
+		},
+		grid: {
+		  left: 30,
+		  right: 30
+		},
+		geo: {
+		  // 这个是重点配置区
+		  map: "china", // 表示中国地图
+		  roam: true,
+		  itemStyle: {
+		    normal: {
+		      borderColor: "rgba(0, 0, 0, 0.2)"
+		    },
+		    emphasis: {
+		      areaColor: null,
+		      shadowOffsetX: 0,
+		      shadowOffsetY: 0,
+		      shadowBlur: 20,
+		      borderWidth: 0,
+		      shadowColor: "rgba(0, 0, 0, 0.5)"
+		    }
+		  }
+		},
+		series: [
+		  {
+		    type: "scatter",
+		    coordinateSystem: "geo" // 对应上方配置
+		  },
+		  {
+		    //name: "启动次数", // 浮动框的标题
+		    type: "map",
+		    geoIndex: 0,
+		    /* data: [
+		      { name: "北京", value: 177 },
+		      { name: "天津", value: 42 },
+		      { name: "河北", value: 102 },
+		      { name: "山西", value: 81 },
+		      { name: "内蒙古", value: 47 },
+		      { name: "辽宁", value: 67 },
+		      { name: "吉林", value: 82 },
+		      { name: "黑龙江", value: 66 },
+		      { name: "上海", value: 24 },
+		      { name: "江苏", value: 92 },
+		      { name: "浙江", value: 114 },
+		      { name: "安徽", value: 109 },
+		      { name: "福建", value: 116 },
+		      { name: "江西", value: 91 },
+		      { name: "山东", value: 119 },
+		      { name: "河南", value: 137 },
+		      { name: "湖北", value: 116 },
+		      { name: "湖南", value: 114 },
+		      { name: "重庆", value: 91 },
+		      { name: "四川", value: 125 },
+		      { name: "贵州", value: 62 },
+		      { name: "云南", value: 83 },
+		      { name: "西藏", value: 9 },
+		      { name: "陕西", value: 80 },
+		      { name: "甘肃", value: 56 },
+		      { name: "青海", value: 10 },
+		      { name: "宁夏", value: 18 },
+		      { name: "新疆", value: 67 },
+		      { name: "广东", value: 123 },
+		      { name: "广西", value: 59 },
+		      { name: "海南", value: 14 }
+		    ], */
+		    data: dataList
+		  }
+		]
+	      };
+	    }
+	  },
+	  data() {
+	    return {
+	      map: {}
+	    };
+	  },
+	  watch: {
+	    newMapData: {
+	      handler(newValue) {
+		if (newValue) {
+		  let maxVal = maxBy(newValue, "value").value;
+		  let minVal = minBy(newValue, "value").value;
+		  this.map = this.getOptions(newValue, maxVal, minVal);
+		}
+	      },
+	      deep: true
+	    }
+	  }
+	};
+	</script>
+	<style scoped>
+	.china {
+	  width: 100%;
+	  height: 100%;
+	}
+	<style>
+	.echarts {
+	  width: 100%!important;
+	  height: 100%!important;
+	}
+	</style>
+</style>
+
+```
+
+
+
+
+
+
