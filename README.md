@@ -41,19 +41,46 @@
            ]
          })
      ```
-### 2.vuex
+### 2.[vuex](https://vuex.vuejs.org/zh/)
+
+   + 通过 npm 安装
+   
+        ```javascript
+          npm install vuex --save
+        ```
+        
+   + 使用方法, main.js 文件中引入，全局注册
+   
+       ```javascript
+         import Vue from 'vue';
+         import Vuex from 'vuex';   // vuex 使用
+         import store from './store';   // 状态管理
+
+         Vue.use(Vuex)
+         
+         new Vue({
+           el: "#app",
+           store,
+           components: { App },
+           template: "<App/>"
+         });
+       ```
+       
 ### 3.axios
 ### 4.qs
-### 5.[lodash](https://www.lodashjs.com/)
+### 5.[lodash](https://vuex.vuejs.org/zh/installation.html)
 
    + **Lodash** 就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。
    
    + 通过 npm 安装
+   
      ```javascript
        npm i -g npm
        npm i --save lodash
      ```
+     
    + 使用方法 (两种)
+   
       + 方法一： main.js 文件中引入，全局注册
       ```javascript
          import lodash from 'lodash';
