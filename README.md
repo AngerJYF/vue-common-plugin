@@ -7,9 +7,7 @@
         npm install vue-router
         ```
    + 使用方法, main.js 文件中引入，全局注册
-   
-   + 写法一：
-   
+  
      ```javascript
          import Vue from "vue";
          import App from "./App";
@@ -22,7 +20,7 @@
            template: "<App/>"
          });
      ```
-     + router 文件夹下 index.js 写法 (vue-cli 3.0+ 搭建的环境没有 router 文件夹,新建 router 文件夹，并创建 index.js 文件)
+    + router 文件夹下 index.js 写法 (vue-cli 3.0+ 搭建的环境没有 router 文件夹,新建 router 文件夹，并创建 index.js 文件)
      
      ```javascript
          import Vue from 'vue'
