@@ -70,9 +70,15 @@
  
       - #### store
          > vuex 状态存储,模块化分类, 对于新的module，新建文件，统一在入口文件引入。
-      - 写法：
+         
+      - 目录结构：
+      
       ```javascript
-
+         ---- store 文件夹  // 与main.js 文件同级
+               ---- module 文件夹
+                     ---- module1.js 文件
+                     ---- module2.js 文件
+               ---- index.js 文件    
       ```
    
 ### 3.axios
