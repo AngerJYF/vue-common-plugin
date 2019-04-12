@@ -269,7 +269,26 @@
          maxBy(objects,key)；
          minBy(objects,key)；
       ```
-### 6. element-ui
+### 6. [element-ui](http://element-cn.eleme.io/2.0/#/zh-CN/component/installation)
+
++ 通过 npm 安装
+  ```js
+    npm i element-ui -S
+  ```
++ 在 main.js 文件中引入
+ ```js
+   import Vue from 'vue';
+   import ElementUI from 'element-ui';
+   import 'element-ui/lib/theme-chalk/index.css';
+   import App from './App.vue';
+
+   Vue.use(ElementUI)
+
+  new Vue({
+   el: '#app',
+   render: h => h(App)
+  })
+ ```
 
 + ##### element-ui 中 loading 组件使用思路;
    ``` js
