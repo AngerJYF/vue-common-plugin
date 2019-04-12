@@ -121,11 +121,10 @@
       ```js
          npm install axios
        ```
-   + 作者本人写项目的 axios 文件写法 (请不要照抄！！！！！)
+   + 作者本人写项目的 axios 文件写法 (请不要照抄!!!!!)
+   
    	```js
-		/** axios封装
-		 * 请求拦截、相应拦截、错误统一处理
-		 */
+		/* axios封装 请求拦截、相应拦截、错误统一处理 */
 		import axios from "axios";
 		import QS from "qs";
 		import { Message } from 'element-ui'
