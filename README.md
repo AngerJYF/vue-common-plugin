@@ -289,7 +289,7 @@
    render: h => h(App)
   })
  ```
-
++ [组件使用](http://element-cn.eleme.io/2.0/#/zh-CN/component/quickstart),注意全局组件和局部组件的不同使用方法!
 + ##### element-ui 中 loading 组件使用思路;
    ``` js
        1. 配合使用 vuex 状态管理来改变 v-loading 的状态值  true Or false;
@@ -329,5 +329,15 @@
 
           # this.setAppLoading(false) 
    ```
-### 7. moment
+### 7. [moment](http://momentjs.cn/)
+   + 一个非常实用的日期工具类 moment.js ,日期获取,格式化等。适用 element-ui 的时间日期组件
+   + 通过 npm 安装
+  	```js
+	   npm install moment --save	
+	```
+   + 在 main.js 中注册
+ 	```js
+	   import moment from 'moment';
+	   Vue.prototype.$moment = moment;
+	```
 ### 8. vue-echarts
