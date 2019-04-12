@@ -9,6 +9,15 @@
       $ npm i -g npm
       $ npm i --save lodash
      ```
+   + 使用方法(两种)
+      - main.js 文件中引入，全局注册
+      ```javascript
+      import lodash from 'lodash';
+      Vue.prototype.$lodash = lodash;
+     ```
+     子组件用法(例)：
+     this.$lodash.maxBy();
+     this.$loadsh.minBy();
 #### 6.qs
 #### 7.moment
 #### 8.vue-echarts
