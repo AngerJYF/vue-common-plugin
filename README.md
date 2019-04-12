@@ -509,13 +509,14 @@
 	  width: 100%;
 	  height: 100%;
 	}
+	</style>
+	
 	<style>
 	.echarts {
 	  width: 100%!important;
 	  height: 100%!important;
 	}
 	</style>
-</style>
 
 ```
 
