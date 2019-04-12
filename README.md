@@ -66,6 +66,16 @@
          });
        ```
        
+   **请官人驻足，仔细阅读**
+ 
+   #### store
+   
+   + vuex 状态存储,模块化分类, 对于新的module，新建文件，统一在入口文件引入。
+   + 写法：
+   ```javascript
+      
+   ```
+   
 ### 3.axios
 ### 4.qs
 ### 5.[lodash](https://vuex.vuejs.org/zh/installation.html)
