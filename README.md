@@ -74,12 +74,46 @@
       - 目录结构：
       
       ```javascript
-         |-- store 文件夹  // 与main.js 文件同级
+         |-- store 文件夹(没有就新建,OK?)  // 与main.js 文件同级
                |-- module 文件夹
                      |-- module1.js 文件
                      |-- module2.js 文件
                |-- index.js 文件    
       ```
+      - 写法：
+      
+      ```javascript
+      
+         // index.js 文件写法：
+         
+         import Vue from 'vue'
+         import vuex from 'vuex'
+         Vue.use(vuex);
+         
+         // 变量名自己随意起, 起 Loading 是为了便于理解下面 element-ui 中 v-loading 插件的使用
+         import Loading from './module/module1.js';  
+         import module2 './module/module2.js';
+         export default new vuex.Store({
+           modules: {
+             Loading,
+             module2
+           }
+         })
+         
+        // module1.js && module1.js 写法：
+        
+        export default {
+        state:{
+           loading: false
+        },
+       mutations:{
+           setAppLoading(state, value) {
+             state.loading = value
+           },
+        }
+      }
+      ```
+      
    
 ### 3.axios
 ### 4.qs
