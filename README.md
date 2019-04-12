@@ -8,14 +8,7 @@
         ```
    + 使用方法, main.js 文件中引入，全局注册
    
-      + 写法一：
-      ```javascript 
-         import Vue from 'vue';
-         import VueRouter from 'vue-router';
-         
-         Vue.use(VueRouter)
-     ```
-     + 写法二：
+    + 写法一：
      ```javascript
          import Vue from "vue";
          import App from "./App";
@@ -27,6 +20,25 @@
            components: { App },
            template: "<App/>"
          });
+     ```
+     + router 文件夹下 index.js 写法 (vue-cli 3.0+ 搭建的环境没有 router 文件夹,新建 router 文件夹，并创建 index.js 文件)
+     ```javascript
+         import Vue from 'vue'
+         import Router from 'vue-router'
+
+         Vue.use(Router)
+
+         const Packages = () => import(/* webpackChunkName: "Packages" */ '@/views/Packages');
+
+         export default new Router({
+           routes: [
+             {
+               path: '/',
+               name: 'Packages',
+               component: Packages
+             }
+           ]
+         })
      ```
 ### 2.vuex
 ### 3.axios
