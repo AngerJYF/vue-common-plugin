@@ -115,8 +115,37 @@
       ```
       
    
-### 3. axios
-### 4. qs
+### 3. axios (配合 qs 使用)
+### 4. qs (配合 axios 使用)
+
+   + **Vue中，序列化字符串，处理发送请求的参数使用工具 qs 来处理参数**
+   + 通过 npm 安装
+      
+      ```js
+         npm i qs 
+       ```
+   + 需要引入 qs 的文件中引入
+   
+      ```js
+         import QS from 'qs'
+      ```
+   + 写法：
+      
+      ```js
+         //qs主要有两个方法 ：
+         
+         //方法一：将对象序列化，多个对象之间用&拼接（拼接是由底层处理，无需手动操作）
+	      //转换成查询字符串
+         QS.stringify();
+         let comments = {content: this.inputValue}
+         let comValue = qs.stringify(comments)
+         
+         //方法二：将序列化的内容拆分成一个个单一的对象
+         //转换成json对象
+         QS.parse() 
+         let comValue = QS.parse(comments)
+
+      ```
 ### 5. [lodash](https://vuex.vuejs.org/zh/installation.html)
 
    + **Lodash** 就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。
