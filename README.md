@@ -202,7 +202,7 @@
 		}
 
 		```
-   + **What ? 不明白 !
+   + **What ? 不明白 !**
    	- 移步外网 [中文](https://www.kancloud.cn/yunye/axios/234845)  [English](https://www.npmjs.com/package/axios)
 	
 ### 4. qs (配合 axios 使用)
@@ -235,7 +235,7 @@
          let comValue = QS.parse(comments)
 
       ```
-     + **What ? 看不懂 !** 转外链看吧  [Fllow Me！](https://blog.csdn.net/suwu150/article/details/78333452)
+   + **What ? 看不懂 !** 转外链看吧  [Fllow Me！](https://blog.csdn.net/suwu150/article/details/78333452)
      
 ### 5. [lodash](https://vuex.vuejs.org/zh/installation.html)
 
