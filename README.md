@@ -20,7 +20,7 @@
          this.$lodash.maxBy(objects,key);
          this.$loadsh.minBy(objects,key);
      ```
-      + 方法二： 在组件中引入使用
+      + 方法二： 只在组件中引入使用
       ```javascript
          import { maxBy, minBy, cloneDeep } from "lodash";
          
