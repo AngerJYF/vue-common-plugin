@@ -100,13 +100,13 @@
            }
          })
          
+         
         // module1.js && module1.js 写法：
-        
         export default {
         state:{
            loading: false
         },
-       mutations:{
+        mutations:{
            setAppLoading(state, value) {
              state.loading = value
            },
