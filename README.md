@@ -1,4 +1,4 @@
-## 基于 vue 开发的项目,常用插件 及 简单使用
+## 基于 vue 开发的项目,常用插件 及 简单使用 (本文提到 npm 安装命令仅适用于，非 mac 电脑！)
 ### 1.[vue-router](https://router.vuejs.org/zh/installation.html)
 
    + 通过 npm 安装 
