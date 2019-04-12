@@ -4,7 +4,7 @@
 #### 3.axios
 #### 4.element-ui
 #### 5.[lodash](https://www.lodashjs.com/)
-   + [Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。]
+   + **Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。**
    + 通过 npm 安装
      ```javascript
       $ npm i -g npm
