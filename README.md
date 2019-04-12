@@ -101,7 +101,7 @@
          })
          
          
-        // module1.js && module1.js 写法：
+        // module1.js || module2.js 写法：
         export default {
         state:{
            loading: false
