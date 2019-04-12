@@ -333,10 +333,9 @@
 	   ```
 ### 7. [moment](http://momentjs.cn/)
    + 一个非常实用的日期工具类 moment.js ,日期获取,格式化等。适用 element-ui 的时间日期组件
-   + 通过 npm 安装;
-   	```js
-	   
-	   	npm install moment --save
+   + 通过 npm 安装
+	```js
+		npm install moment --save
 	```
    + 在 main.js 中注册;
 	```js
