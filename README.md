@@ -333,21 +333,20 @@
 	   ```
 ### 7. [moment](http://momentjs.cn/)
    + 一个非常实用的日期工具类 moment.js ,日期获取,格式化等。适用 element-ui 的时间日期组件
-   + 通过 npm 安装;
-    	```js
+	+ 通过 npm 安装;
+	```js
 		npm install moment --save
-    	```
-   + 在 main.js 中注册;
-   
+	```
+	+ 在 main.js 中注册;
 	```js
 		import moment from 'moment';
 		Vue.prototype.$moment = moment;
 	```
-   + 子组件中写法：
+	+ 子组件中写法：
 	```js
 		this.$moment("getTime").format("YYYY-MM-DD");
 	```
-   + 将已经转换格式的时间转回原来的格式
+	+ 将已经转换格式的时间转回原来的格式
 	```js
 		new Date("getTime");
 	```
