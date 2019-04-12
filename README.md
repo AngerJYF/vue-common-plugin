@@ -27,7 +27,8 @@
          import Router from 'vue-router'
 
          Vue.use(Router)
-
+         
+         // 路由按需加载
          const Packages = () => import(/* webpackChunkName: "Packages" */ '@/views/Packages');
 
          export default new Router({
