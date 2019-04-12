@@ -10,16 +10,24 @@
       $ npm i --save lodash
      ```
    + 使用方法 (两种)
-      + main.js 文件中引入，全局注册
+      + 方法一： main.js 文件中引入，全局注册
       ```javascript
          import lodash from 'lodash';
          Vue.prototype.$lodash = lodash;
+         
+         子组件中用法 (例)：
+         
+         this.$lodash.maxBy(objects,key);
+         this.$loadsh.minBy(objects,key);
      ```
-     子组件用法 (例)：
+      + 方法二： 在组件中引入使用
       ```javascript
-        this.$lodash.maxBy();
-        this.$loadsh.minBy();
-     ```
+         import { maxBy, minBy, cloneDeep } from "lodash";
+         
+         子组件中用法 (例)：
+         maxBy(objects,key)；
+         minBy(objects,key)；
+      ```
 #### 6.qs
 #### 7.moment
 #### 8.vue-echarts
