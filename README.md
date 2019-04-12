@@ -74,5 +74,45 @@
          minBy(objects,key)；
       ```
 ### 6.element-ui
+
++ ##### element-ui 中 loading 组件使用思路;
+   ``` js
+       1. 配合使用 vuex 状态管理来改变 v-loading 的状态值  true Or false;
+       2. 在 main.js 中引入 vuex;
+
+           import Vuex from "vuex";
+           import store from './store';
+           Vue.use(Vuex);
+
+       3. 在 APP.vue 中引入 mapState,mapMutations;在父组件上写入 v-loding="getLoading";
+
+           import { mapState, mapMutations } from "vuex";
+
+           # 注: getLoading 为从 vuex 获取到的状态值;
+
+           computed:{
+               ...mapState({
+                   getLoading (state){
+                       return state.Loading.loading;                    
+                   }
+               })
+           }
+       4. 在子组件里更改 vuex 中 v-loading 的值;
+
+          # 子组件引入  
+             import { mapState, mapMutations } from "vuex";  
+             
+          # methods 中写入方法: 
+           // 获取更改 loading 值得方法;
+          ...mapMutations(["setLoading"]);
+
+       5. 在发送 axios 请求之前设置 loading 状态值为 true;
+
+          # this.setAppLoading(true) 
+
+          请求数据成功与否,都再次更改 vuex 中loading 值为 false;
+
+          # this.setAppLoading(false) 
+   ```
 ### 7.moment
 ### 8.vue-echarts
