@@ -15,7 +15,7 @@
          import lodash from 'lodash';
          Vue.prototype.$lodash = lodash;
          
-         子组件中用法 (例)：
+         子组件中写法 (例)：
          
          this.$lodash.maxBy(objects,key);
          this.$loadsh.minBy(objects,key);
@@ -24,7 +24,8 @@
       ```javascript
          import { maxBy, minBy, cloneDeep } from "lodash";
          
-         子组件中用法 (例)：
+         子组件中写法 (例)：
+         
          maxBy(objects,key)；
          minBy(objects,key)；
       ```
