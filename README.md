@@ -1,5 +1,5 @@
 ## 基于 vue 开发的项目,常用插件 及 简单使用 (本文提到 npm 安装命令仅适用于，非 mac 电脑！)
-### 1.[vue-router](https://router.vuejs.org/zh/installation.html)
+### 1. [vue-router](https://router.vuejs.org/zh/installation.html)
 
    + 通过 npm 安装 
    
@@ -41,7 +41,7 @@
            ]
          })
      ```
-### 2.[vuex](https://vuex.vuejs.org/zh/)
+### 2. [vuex](https://vuex.vuejs.org/zh/)
 
    + 通过 npm 安装
    
@@ -115,9 +115,9 @@
       ```
       
    
-### 3.axios
-### 4.qs
-### 5.[lodash](https://vuex.vuejs.org/zh/installation.html)
+### 3. axios
+### 4. qs
+### 5. [lodash](https://vuex.vuejs.org/zh/installation.html)
 
    + **Lodash** 就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数，其中部分是目前ECMAScript尚未制订的规范，但同时被业界所认可的辅助函数。
    
@@ -149,7 +149,7 @@
          maxBy(objects,key)；
          minBy(objects,key)；
       ```
-### 6.element-ui
+### 6. element-ui
 
 + ##### element-ui 中 loading 组件使用思路;
    ``` js
@@ -190,5 +190,5 @@
 
           # this.setAppLoading(false) 
    ```
-### 7.moment
-### 8.vue-echarts
+### 7. moment
+### 8. vue-echarts
