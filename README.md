@@ -123,85 +123,85 @@
        ```
    + 作者本人写项目的 axios 文件写法 (请不要照抄!!!!!)
    
-   ```js
-	import axios from "axios";
-	import QS from "qs";
-	import { Message } from 'element-ui'
-	
-	// post请求头
-	axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8";
-	
-	const SUCCESS_CODE = 200;
-	
-	/**
-	 * get方法，对应get请求
-	 * @param {String} url [请求的url地址]
-	 * @param {Object} params [请求时携带的参数]
-	 */
-	export function get(url, params) {
-	  return new Promise((resolve, reject) => {
-	    axios
-	      .get(url, {
-		params: params
-	      })
-	      .then(res => {
-		//console.log(res)
-		if (res.data.code != SUCCESS_CODE) {
-		  Message({
-		    message: `服务器错误,状态码${res.data.code}`,
-		    type: 'error',
-		    duration: 2000
-		  });
-		  // return
-		}
-		resolve(res.data);
-	      })
-	      .catch(err => {
-		Message({
-		  message: `服务器错误!`,
-		  type: 'error',
-		  duration: 2000
-		});
-		reject(err.data);
-	      });
-	  });
-	}
-		
-	/**
-	 * post方法，对应post请求
-	 * @param {String} url [请求的url地址]
-	 * @param {Object} params [请求时携带的参数]
-	 * 使用Qs,转换请求类型为application/x-www-form-urlencoded;charset=UTF-8,
-	 * 不使用会使用application/json;charset=UTF-8，根据后台需求来定
-	 */
-	export function post(url, params, message = "服务器错误") {
-	  return new Promise((resolve, reject) => {
-	    axios
-	      .post(url, QS.stringify(params))
-	      .then(res => {
-		if (res.data.code != SUCCESS_CODE) {
-		  Message({
-		    // message: `${message},状态码${res.data.code}`,
-		    message: message == "政务信息已存在" ? message : `${message},状态码${res.data.code}`,
-		    type: 'error',
-		    duration: 2000
-		  });
-		  // return
-		}
-		resolve(res.data);
-	      })
-	      .catch(err => {
-		Message({
-		  message: `服务器错误!`,
-		  type: 'error',
-		  duration: 2000
-		});
-		reject(err.data);
-	      });
-	  });
-	}
+	   ```js
+		import axios from "axios";
+		import QS from "qs";
+		import { Message } from 'element-ui'
 
-	```
+		// post请求头
+		axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8";
+
+		const SUCCESS_CODE = 200;
+
+		/**
+		 * get方法，对应get请求
+		 * @param {String} url [请求的url地址]
+		 * @param {Object} params [请求时携带的参数]
+		 */
+		export function get(url, params) {
+		  return new Promise((resolve, reject) => {
+		    axios
+		      .get(url, {
+			params: params
+		      })
+		      .then(res => {
+			//console.log(res)
+			if (res.data.code != SUCCESS_CODE) {
+			  Message({
+			    message: `服务器错误,状态码${res.data.code}`,
+			    type: 'error',
+			    duration: 2000
+			  });
+			  // return
+			}
+			resolve(res.data);
+		      })
+		      .catch(err => {
+			Message({
+			  message: `服务器错误!`,
+			  type: 'error',
+			  duration: 2000
+			});
+			reject(err.data);
+		      });
+		  });
+		}
+
+		/**
+		 * post方法，对应post请求
+		 * @param {String} url [请求的url地址]
+		 * @param {Object} params [请求时携带的参数]
+		 * 使用Qs,转换请求类型为application/x-www-form-urlencoded;charset=UTF-8,
+		 * 不使用会使用application/json;charset=UTF-8，根据后台需求来定
+		 */
+		export function post(url, params, message = "服务器错误") {
+		  return new Promise((resolve, reject) => {
+		    axios
+		      .post(url, QS.stringify(params))
+		      .then(res => {
+			if (res.data.code != SUCCESS_CODE) {
+			  Message({
+			    // message: `${message},状态码${res.data.code}`,
+			    message: message == "政务信息已存在" ? message : `${message},状态码${res.data.code}`,
+			    type: 'error',
+			    duration: 2000
+			  });
+			  // return
+			}
+			resolve(res.data);
+		      })
+		      .catch(err => {
+			Message({
+			  message: `服务器错误!`,
+			  type: 'error',
+			  duration: 2000
+			});
+			reject(err.data);
+		      });
+		  });
+		}
+
+		```	
 ### 4. qs (配合 axios 使用)
 
    + **Vue中，序列化字符串，处理发送请求的参数使用工具 qs 来处理参数**
