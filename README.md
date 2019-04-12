@@ -271,73 +271,76 @@
       ```
 ### 6. [element-ui](http://element-cn.eleme.io/2.0/#/zh-CN/component/installation)
 
-+ 通过 npm 安装
-  ```js
-    npm i element-ui -S
-  ```
-+ 在 main.js 文件中引入
- ```js
-   import Vue from 'vue';
-   import ElementUI from 'element-ui';
-   import 'element-ui/lib/theme-chalk/index.css';
-   import App from './App.vue';
+   + 通过 npm 安装
+	  ```js
+	    npm i element-ui -S
+	  ```
+   + 在 main.js 文件中引入
+	 ```js
+	   import Vue from 'vue';
+	   import ElementUI from 'element-ui';
+	   import 'element-ui/lib/theme-chalk/index.css';
+	   import App from './App.vue';
 
-   Vue.use(ElementUI)
+	   Vue.use(ElementUI)
 
-  new Vue({
-   el: '#app',
-   render: h => h(App)
-  })
- ```
-+ [组件使用](http://element-cn.eleme.io/2.0/#/zh-CN/component/quickstart),注意全局组件和局部组件的不同使用方法!
-+ ##### element-ui 中 loading 组件使用思路;
-   ``` js
-       1. 配合使用 vuex 状态管理来改变 v-loading 的状态值  true Or false;
-       2. 在 main.js 中引入 vuex;
+	  new Vue({
+	   el: '#app',
+	   render: h => h(App)
+	  })
+	 ```
+  + [组件使用](http://element-cn.eleme.io/2.0/#/zh-CN/component/quickstart),注意全局组件和局部组件的不同使用方法!
+  + ##### element-ui 中 loading 组件使用思路;
+  
+	   ``` js
+	   
+	       1. 配合使用 vuex 状态管理来改变 v-loading 的状态值  true Or false;
+	       2. 在 main.js 中引入 vuex;
 
-           import Vuex from "vuex";
-           import store from './store';
-           Vue.use(Vuex);
+		   import Vuex from "vuex";
+		   import store from './store';
+		   Vue.use(Vuex);
 
-       3. 在 APP.vue 中引入 mapState,mapMutations;在父组件上写入 v-loding="getLoading";
+	       3. 在 APP.vue 中引入 mapState,mapMutations;在父组件上写入 v-loding="getLoading";
 
-           import { mapState, mapMutations } from "vuex";
+		   import { mapState, mapMutations } from "vuex";
 
-           # 注: getLoading 为从 vuex 获取到的状态值;
+		   # 注: getLoading 为从 vuex 获取到的状态值;
 
-           computed:{
-               ...mapState({
-                   getLoading (state){
-                       return state.Loading.loading;                    
-                   }
-               })
-           }
-       4. 在子组件里更改 vuex 中 v-loading 的值;
+		   computed:{
+		       ...mapState({
+			   getLoading (state){
+			       return state.Loading.loading;                    
+			   }
+		       })
+		   }
+	       4. 在子组件里更改 vuex 中 v-loading 的值;
 
-          # 子组件引入  
-             import { mapState, mapMutations } from "vuex";  
-             
-          # methods 中写入方法: 
-           // 获取更改 loading 值得方法;
-          ...mapMutations(["setLoading"]);
+		  # 子组件引入  
+		     import { mapState, mapMutations } from "vuex";  
 
-       5. 在发送 axios 请求之前设置 loading 状态值为 true;
+		  # methods 中写入方法: 
+		   // 获取更改 loading 值得方法;
+		  ...mapMutations(["setLoading"]);
 
-          # this.setAppLoading(true) 
+	       5. 在发送 axios 请求之前设置 loading 状态值为 true;
 
-          请求数据成功与否,都再次更改 vuex 中loading 值为 false;
+		  # this.setAppLoading(true) 
 
-          # this.setAppLoading(false) 
-   ```
+		  请求数据成功与否,都再次更改 vuex 中loading 值为 false;
+
+		  # this.setAppLoading(false) 
+	   ```
 ### 7. [moment](http://momentjs.cn/)
    + 一个非常实用的日期工具类 moment.js ,日期获取,格式化等。适用 element-ui 的时间日期组件
-   + 通过 npm 安装
-  	```js
-	   npm install moment --save	
-	```
-   + 在 main.js 中注册
- 	```js
-	   import moment from 'moment';
-	   Vue.prototype.$moment = moment;
-	```
+   + 通过 npm 安装;
+    	```js
+		npm install moment --save
+    	```
+   + 在 main.js 中注册;
+   ```js
+   	import moment from 'moment';
+	Vue.prototype.$moment = moment;
+   ```
+
 ### 8. vue-echarts
