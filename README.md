@@ -340,14 +340,14 @@
    + 在 main.js 中注册;
    
 	```js
-		import moment from 'moment';
-		Vue.prototype.$moment = moment;
-		
-		//子组件中写法：
-		this.$moment("getTime").format("YYYY-MM-DD");
-		
-		//转回原来的格式
-		new Date("getTime").getTime();
+	import moment from 'moment';
+	Vue.prototype.$moment = moment;
+
+	//子组件中写法：
+	this.$moment("getTime").format("YYYY-MM-DD");
+
+	//转回原来的格式
+	new Date("getTime");
 	```
 
 ### 8. vue-echarts
