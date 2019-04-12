@@ -1,11 +1,13 @@
 ## 基于 vue 开发的项目,常用插件 及 简单使用
 #### 1.[vue-router](https://router.vuejs.org/zh/installation.html)
 
-   + 通过 npm 安装
+   + 通过 npm 安装 
+   
         ```javascript
         npm install vue-router
         ```
    + 使用方法, main.js 文件中引入，全局注册
+   
       + 写法一：
       ```javascript 
          import Vue from 'vue'
